@@ -33,14 +33,25 @@ header {
     z-index: 100; /* Ensure the header appears above other content */
 }
 
-@media screen and (max-width: 600px) {
-    header, nav a {
-        font-size: smaller; /* Adjust as needed */
-    }
-    nav ul li {
-        margin-right: 10px; /* Reduce spacing */
+/*Responsiveness*/
+
+@media screen and (max-width: 1200px) {
+    nav a {
+        font-size: 1.2rem; /* Slightly smaller font size for medium screens */
     }
 }
+
+@media screen and (max-width: 768px) {
+    header, nav a {
+        font-size: 1rem; /* Smaller font size */
+    }
+    nav ul li {
+        margin-right: 5px; /* Reduce spacing */
+
+    }
+}
+
+/*Navigation Styles*/
 
 nav {
     display: flex;
@@ -64,6 +75,7 @@ nav a {
     font-size: 1.5rem;
     font-weight: bold;
     transition: color 0.3s;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -109,12 +121,18 @@ footer {
     position: relative;
 }
 
+/*About Styles*/
+
 #about {
     text-align: justify;
 }
 
+/*Google Sheets inframe style*/
+
+
 .iframe-container {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     width: 100%; /* Adjust height as needed */
@@ -124,9 +142,13 @@ footer {
     transform: scale(1.2);
 }
 
+/*Responsiveness of iframes for smaller devices*/
+
 @media screen and (max-width: 600px) {
     .iframe-container iframe {
-        width: 100%; /* Full width of the container */
+        width: 50%; /* Full width of the container */
         height: auto; /* Maintain aspect ratio */
     }
 }
+
+ 
