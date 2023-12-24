@@ -137,9 +137,17 @@ footer {
 
 @media only screen and (max-width: 768px) {
     body {
-        background-size: auto; /* Change to 'auto' or a specific value */
+        background-size: contain; /* Adjust background size */
+        background-attachment: scroll; /* Make it scroll with the page */
     }
 }
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px 0; /* Reduce padding */
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
     nav ul {
@@ -152,28 +160,35 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    main, section {
-        padding: 20px; /* Less padding for smaller screens */
+    main, section, .blog-post {
+        padding: 15px; /* Less padding for smaller screens */
     }
 }
 
 @media only screen and (max-width: 768px) {
-    body, h1, h2, p {
-        font-size: smaller; /* Adjust font sizes */
+    body, h1, h2, p, nav a {
+        font-size: 14px; /* Smaller font size for readability */
     }
 }
 
-@media only screen and (max-width: 768px) {
-    nav a {
-        font-size: smaller; /* Adjust font sizes */
-    }
-}
 
 @media only screen and (max-width: 768px) {
     .iframe-container iframe {
         height: 150px; /* Adjust height for mobile devices */
     }
 }
+
+@media only screen and (max-width: 768px) {
+    nav ul li a, button, .clickable-element {
+        padding: 15px; /* Larger touch targets */
+    }
+}
+
+img, .iframe-container iframe {
+    max-width: 100%; /* Ensure they don't overflow the screen width */
+    height: 80%; /* Maintain aspect ratio */
+}
+
 
 
 
