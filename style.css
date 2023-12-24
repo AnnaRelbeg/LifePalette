@@ -33,24 +33,6 @@ header {
     z-index: 100; /* Ensure the header appears above other content */
 }
 
-/*Responsiveness*/
-
-@media screen and (max-width: 1200px) {
-    nav a {
-        font-size: 1.2rem; /* Slightly smaller font size for medium screens */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    header, nav a {
-        font-size: 1rem; /* Smaller font size */
-    }
-    nav ul li {
-        margin-right: 5px; /* Reduce spacing */
-
-    }
-}
-
 /*Navigation Styles*/
 
 nav {
@@ -113,12 +95,13 @@ section {
 
 /* Footer Styles */
 footer {
-    background-color: rgb(155, 50, 66); /* Navy red */
+    background-color: #333; /* Navy red */
     color: #fff;
     font-weight: bold;
     text-align: center;
     padding: 10px 0;
     position: relative;
+    z-index: 2; /* Add this line to make footer appear above the slideshow */
 }
 
 /*About Styles*/
@@ -131,26 +114,61 @@ footer {
 
 
 .iframe-container {
-    display: flex;
-    position: relative;
+    width: 100%; /* Ensures the container fits the section width */
+    height: 250px;
+    overflow: hidden; /* Prevents any overflow issues */
     justify-content: center;
     align-items: center;
-    width: 100%; /* Adjust height as needed */
 }
 
-
+.iframe-container iframe {
+    width: 100%; /* Full width of the container */
+    height: 250px;
+    border: none; /* Optional: Removes the border */
+    justify-content: center;
+    align-items: center;
+}
 
 .iframe-container:hover {
     transform: scale(1.2);
 }
 
-/*Responsiveness of iframes for smaller devices*/
+/* Responsiveness*/
 
-@media screen and (max-width: 600px) {
-    .iframe-container iframe {
-        width: 50%; /* Full width of the container */
-        height: auto; /* Maintain aspect ratio */
+@media only screen and (max-width: 768px) {
+    body {
+        background-size: auto; /* Change to 'auto' or a specific value */
     }
 }
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: block; /* Stack the menu items vertically */
+    }
+    nav ul li {
+        display: block; /* Each item takes a full row */
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main, section {
+        padding: 20px; /* Less padding for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body, h1, h2, p {
+        font-size: smaller; /* Adjust font sizes */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .iframe-container iframe {
+        height: 150px; /* Adjust height for mobile devices */
+    }
+}
+
+
 
  
