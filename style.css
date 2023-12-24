@@ -136,13 +136,6 @@ footer {
 /* Responsiveness*/
 
 @media only screen and (max-width: 768px) {
-    body {
-        background-size: contain; /* Adjust background size */
-        background-attachment: scroll; /* Make it scroll with the page */
-    }
-}
-
-@media only screen and (max-width: 768px) {
     header {
         padding: 10px 0; /* Reduce padding */
     }
