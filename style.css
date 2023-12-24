@@ -130,7 +130,7 @@ footer {
 }
 
 .iframe-container:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 /* Responsiveness*/
@@ -154,13 +154,19 @@ footer {
 
 @media only screen and (max-width: 768px) {
     main, section, .blog-post {
-        padding: 15px; /* Less padding for smaller screens */
+        padding: 12px; /* Less padding for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 16px; /* Smaller font size for readability */
     }
 }
 
 @media only screen and (max-width: 768px) {
     body, h1, h2, p, nav a {
-        font-size: 14px; /* Smaller font size for readability */
+        font-size: 10px; /* Smaller font size for readability */
     }
 }
 
@@ -173,20 +179,20 @@ footer {
 
 @media only screen and (max-width: 768px) {
     nav ul li a, button, .clickable-element {
-        padding: 15px; /* Larger touch targets */
+        padding: 12px; /* Smaller targets */
     }
 }
 
 @media only screen and (max-width: 768px) {
     body {
-        background-size: auto 100%; /* Adjusts the height to cover the screen, width is auto-scaled */
-        background-position: top center; /* Adjusts the position to focus on a specific part, e.g., top */
+        background-image: url('assets/images/Background_forMobile.png'); /* More suitable image for mobile */
+        background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
 }
 
-img, .iframe-container iframe {
+.iframe-container iframe {
     max-width: 100%; /* Ensure they don't overflow the screen width */
     height: 80%; /* Maintain aspect ratio */
 }
