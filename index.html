@@ -5,23 +5,31 @@
         <link rel="icon" type="image/png"  href="assets/images/logo.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     </head>
 
     <body>
+    
+    
         <header>
             <h1>Life Palette by AG</h1>
             <nav>
                 <ul>
+                    <li> <a href="#home">Home </a></li>
                     <li> <a href="#about">Colour Me </a></li>
-                    <li> <a href="#health">Health Hues </a></li>
-                    <li> <a href="#career">Career Canvas </a></li>
-                    <li> <a href="#relationships">Relationship Shades </a></li>
+                    <li> <a href="#" @click="navigateTo('health')">Health Hues </a></li>
+                    <li> <a href="#" @click="navigateTo('career')">Career Canvas </a></li>
+                    <li> <a href="#" @click="navigateTo('relationships')">Relationship Shades </a></li>  
                 </ul>
             </nav>
         </header>
-
+    <div id="app">  
         <main>
-            <section id="about">
+            <section id="home">
+                <h2 id="welcome-message">Loading greeting...</h2>
+            </section>
+
+            <section id="about" v-if="currentView === 'about'">
                 <h2>Colour Me</h2>
                 <br>
                 <p>Isn't life just utterly overwhelming? It's like a vibrant and intricate painting, full of colors and details that sometimes blur into a mess. We're constantly juggling between our dreams, responsibilities, trying to find that elusive balance.</p>
@@ -53,9 +61,12 @@
                     <iframe width=600 height=300 seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR_IbMfNmCLjGJhUU7vw0Gtc1CGNzF-SdZ6C_WiRMhDx6J-1Y73j_wjuxROEC6Qb5gGlhhP7tDRm0ZM/pubchart?oid=1004413372&amp;format=interactive"></iframe>
                 </div>
                 <p>Welcome to "Life Palette by AG." Let's make every color count. 🎨✨</p>
+                <p>Let's start reviewing:</p>
+                    <a href="#" @click="navigateTo('health')">Health Hues</a>
             </section>
-            
-            <section id="health">
+        
+      
+            <section id="health" v-if="currentView === 'health'">
                 <h2>Health Hues</h2>
                 <p>Health has become my top priority, especially as I approach my 29th birthday in 2024. It's time to get serious about my well-being! I'll admit, I've fallen into some not-so-great habits—ordering takeout, not moving enough, and forgetting to stay hydrated.</p>
                 <br>
@@ -78,18 +89,18 @@
                     </article>
             </section>
 
-            <section id="career">
+            <section id="career" v-if="currentView === 'career'">
                 <h2>Career Canvas</h2>
                 <p>Honestly this might be my favourite section!</p>
             </section>
 
-            <section id="relationships">
+            <section id="relationships" v-if="currentView === 'relationships'">
                 <h2>Relationship Shades</h2>
                 <p>This is my least favourite thing to discuss or think about. I often take this for granted or avoid it at all cost. </p>
             </section>
 
 
-            <section class="blog-posts">
+            <section class="blog-posts" v-if="currentView === 'blog-posts'">
                 <article class="blog-post">
                     <h2>Objectives for 2024</h2>
                     <p>I have used a goals wheel to set my objectives for 2024.
@@ -104,6 +115,42 @@
         <footer>
             <p>&copy; 2023 Life Palette by AG</p>
         </footer>
+    </div>
+
+        <script>
+            function welcomeMessage() {
+    const now = new Date();
+    const hours = now.getHours();
+    const dayOfWeek = now.getDay();
+
+    let timeOfDay;
+    if (hours < 12) {
+        timeOfDay = 'morning';
+    } else if (hours < 18) {
+        timeOfDay = 'afternoon';
+    } else {
+        timeOfDay = 'evening';
+    }
+
+    let day;
+    switch (dayOfWeek) {
+        case 0: day = 'Sunday'; break;
+        case 1: day = 'Monday'; break;
+        case 2: day = 'Tuesday'; break;
+        case 3: day = 'Wednesday'; break;
+        case 4: day = 'Thursday'; break;
+        case 5: day = 'Friday'; break;
+        case 6: day = 'Saturday'; break;
+    }
+
+    return `Good ${timeOfDay}! Ready for the torturous review? Happy ${day}!`;
+}
+
+console.log(welcomeMessage());
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="app.js"></script>
     </body>
 </html>
 

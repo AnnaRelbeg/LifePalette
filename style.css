@@ -141,6 +141,15 @@ footer {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: block; /* Stack the menu items vertically */
+    }
+    nav ul li {
+        display: block; /* Each item takes a full row */
+        margin-right: 0;
+    }
+}
 
 
 
@@ -187,6 +196,11 @@ footer {
 .iframe-container iframe {
     max-width: 100%; /* Ensure they don't overflow the screen width */
     height: 80%; /* Maintain aspect ratio */
+}
+
+img {
+    max-width: 100%; /* Ensure they don't overflow the screen width */
+    height: 100%; /* Maintain aspect ratio */
 }
 
 
