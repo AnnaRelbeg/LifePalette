@@ -10,26 +10,17 @@
 
     <body>
     
-    
+    <div id="app">  
         <header>
             <h1>Life Palette by AG</h1>
-            <nav>
-                <ul>
-                    <li> <a href="#home">Home </a></li>
-                    <li> <a href="#about">Colour Me </a></li>
-                    <li> <a href="#" @click="navigateTo('health')">Health Hues </a></li>
-                    <li> <a href="#" @click="navigateTo('career')">Career Canvas </a></li>
-                    <li> <a href="#" @click="navigateTo('relationships')">Relationship Shades </a></li>  
-                </ul>
-            </nav>
         </header>
-    <div id="app">  
+
         <main>
             <section id="home">
-                <h2 id="welcome-message">Loading greeting...</h2>
+                <h2 id="welcome-message">{{ greetingMessage }}</h2>
             </section>
 
-            <section id="about" v-if="currentView === 'about'">
+            <section id="about">
                 <h2>Colour Me</h2>
                 <br>
                 <p>Isn't life just utterly overwhelming? It's like a vibrant and intricate painting, full of colors and details that sometimes blur into a mess. We're constantly juggling between our dreams, responsibilities, trying to find that elusive balance.</p>
@@ -62,7 +53,13 @@
                 </div>
                 <p>Welcome to "Life Palette by AG." Let's make every color count. 🎨✨</p>
                 <p>Let's start reviewing:</p>
-                    <a href="#" @click="navigateTo('health')">Health Hues</a>
+                <nav>   
+                    <ul>
+                        <li> <a href="#" class="button-link" @click="navigateTo('health', $event)">🌿 Health Hues</a></li>
+                        <li> <a href="#" class="button-link" @click="navigateTo('career', $event)"> 💼 Career Canvas </a></li>
+                        <li> <a href="#" class="button-link" @click="navigateTo('relationships', $event)"> ❤️ Relationship Shades </a></li>  
+                    </ul>
+                <nav>
             </section>
         
       
@@ -118,35 +115,7 @@
     </div>
 
         <script>
-            function welcomeMessage() {
-    const now = new Date();
-    const hours = now.getHours();
-    const dayOfWeek = now.getDay();
-
-    let timeOfDay;
-    if (hours < 12) {
-        timeOfDay = 'morning';
-    } else if (hours < 18) {
-        timeOfDay = 'afternoon';
-    } else {
-        timeOfDay = 'evening';
-    }
-
-    let day;
-    switch (dayOfWeek) {
-        case 0: day = 'Sunday'; break;
-        case 1: day = 'Monday'; break;
-        case 2: day = 'Tuesday'; break;
-        case 3: day = 'Wednesday'; break;
-        case 4: day = 'Thursday'; break;
-        case 5: day = 'Friday'; break;
-        case 6: day = 'Saturday'; break;
-    }
-
-    return `Good ${timeOfDay}! Ready for the torturous review? Happy ${day}!`;
-}
-
-console.log(welcomeMessage());
+          
 
         </script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
