@@ -192,15 +192,6 @@ footer {
     }
 }
 
-@media only screen and (max-width: 768px) {
-    nav ul {
-        display: block; /* Stack the menu items vertically */
-    }
-    nav ul li {
-        display: block; /* Each item takes a full row */
-        margin-right: 0;
-    }
-}
 
 @media only screen and (max-width: 768px) {
     main, section, .blog-post {
@@ -210,13 +201,19 @@ footer {
 
 @media only screen and (max-width: 768px) {
     h1 {
+        font-size: 24px; /* Smaller font size for readability */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1, h2 {
         font-size: 16px; /* Smaller font size for readability */
     }
 }
 
 @media only screen and (max-width: 768px) {
-    body, h1, h2, p, nav a {
-        font-size: 10px; /* Smaller font size for readability */
+    body, p, nav a {
+        font-size: 12px; /* Smaller font size for readability */
     }
 }
 
@@ -237,7 +234,7 @@ footer {
     body {
         background-image: url('assets/images/Background_forMobile.png'); /* More suitable image for mobile */
         background-size: cover;
-        background-attachment: fixed;
+        background-attachment: relative;
         background-repeat: no-repeat;
     }
 }
