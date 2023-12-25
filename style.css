@@ -37,7 +37,6 @@ header {
 
 nav {
     display: flex;
-
 }
 
 nav ul {
@@ -46,8 +45,6 @@ nav ul {
 
 nav ul li {
     display: block;
-    margin-right: 10px;
-    margin-top: 30px;
 }
 
 nav a {
@@ -59,9 +56,63 @@ nav a {
     white-space: nowrap;
 }
 
-nav a:hover {
+#button-health {
+    background-color: #4caf50; /* Green color for Health */
+    color: white;
+    text-align: center;
+
+}
+
+#button-career {
+    background-color: #007bff; /* Blue color for Career */
+    color: white;
+}
+
+#button-relationships {
+
+    background-color: #ff4081; /* Pink color for Relationship */
+    color: white;
+
+}
+
+#button-relationships:hover {
+    background-color: rgb(255, 255, 255, 0.8);
     color: #d4af37; /* Gold */
 }
+
+#button-health:hover {
+    background-color: rgb(255, 255, 255, 0.8);
+    color: #d4af37; /* Gold */
+}
+
+#button-career:hover {
+    background-color: rgb(255, 255, 255, 0.8);
+    color: #d4af37; /* Gold */
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px 25px 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+}
+
+.button-link:hover, .button-link:focus {
+    background-color: #333; /* Darker shade for hover */
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1); /* Shadow for depth */
+}
+
+.button-link:active {
+    background-color: white; /* Even darker for active state */
+}
+
 
 /* Main Content Styles */
 main {
@@ -116,16 +167,17 @@ footer {
     width: 100%; /* Ensures the container fits the section width */
     height: 150px;
     overflow: hidden; /* Prevents any overflow issues */
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;  /* Center vertically */
+
 }
 
 .iframe-container iframe {
-    width: 100%; /* Full width of the container */
+    width: 300px; /* Full width of the container */
     height: 150px;
     border: none; /* Optional: Removes the border */
-    justify-content: center;
-    align-items: center;
+    max-width: 100%;
 }
 
 .iframe-container:hover {
@@ -149,8 +201,6 @@ footer {
         margin-right: 0;
     }
 }
-
-
 
 @media only screen and (max-width: 768px) {
     main, section, .blog-post {
@@ -192,40 +242,27 @@ footer {
     }
 }
 
-.iframe-container iframe {
-    max-width: 100%; /* Ensure they don't overflow the screen width */
-    height: 80%; /* Maintain aspect ratio */
-}
-
 img {
+
     max-width: 100%; /* Ensure they don't overflow the screen width */
     height: 100%; /* Maintain aspect ratio */
 }
 
-.button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255, 0.9); /* Primary color */
-    color: #333; /* Text color */
+
+table, th, td {
+
+    border: 1px solid #333;
+}
+
+table {
+
+    border-collapse: collapse;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.button-link:hover, .button-link:focus {
-    background-color: #333; /* Darker shade for hover */
-    box-shadow: 0 4px 8px rgba(255,255,255,0.1); /* Shadow for depth */
+.review-main h2  {
+    text-align: center;
 }
-
-.button-link:active {
-    background-color: white; /* Even darker for active state */
-}
-
-
-
- 

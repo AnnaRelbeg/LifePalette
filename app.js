@@ -35,7 +35,7 @@ new Vue({
             }
 
             // Update the greeting message
-            this.greetingMessage = `Good ${timeOfDay}! Ready for the torturous review? Happy ${day}!`;
+            this.greetingMessage = `Good ${timeOfDay} Anna... or intrusive visitor! Happy ${day}!`;
         }
     },
     created: function() {

@@ -33,33 +33,43 @@
                 <br>
                 <p>In my pursuit of balance and growth, I've established three key gauges: <b>Health, Career, and Relationships</b>, each with three critical subcategories. Regular scoring on a scale from 1 to 10.</p>
                 <br>
-                <p><b>Health 🌿</b> includes:</p>
-                    <p>Body 💪</p> 
-                    <p>Mind 🧠</p>  
-                    <p>Soul ✨</p>
-                <p><b>Career 💼</b> comprises:</p>  
-                    <p>Mission 🚀</p>
-                    <p>Money 💰</p>
-                    <p>Growth 🌱</p>
-                <p><b>Relationships ❤️</b> encompass:</p>
-                    <p>Mentors 💼</p>
-                    <p>Family 👨‍👩‍👧</p>
-                    <p>Friends 🙌</p>
-                <br>
-                <p>My current status is:</p>
+                <table>
+                    <th>Health 🌿</th>
+                    <th>Career 💼</th>
+                    <th>Relationships 🤝</th>
+                    <tr>
+                        <td>Body 💪</td>
+                        <td>Mission 🚀</td>
+                        <td>Mentors 💼</td>
+                    </tr>
+                    <tr>
+                        <td>Mind 🧠</td>
+                        <td>Money 💰</td>
+                        <td>Family 👨‍👩‍👧</td>
+                    </tr>
+                    <tr>
+                        <td>Soul ✨</td>
+                        <td>Growth 🌱</td>
+                        <td>Friends 🙌</td>
+                    </tr>
+                </table>
                 <br>
                 <div class="iframe-container">
                     <iframe width=600 height=300 seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR_IbMfNmCLjGJhUU7vw0Gtc1CGNzF-SdZ6C_WiRMhDx6J-1Y73j_wjuxROEC6Qb5gGlhhP7tDRm0ZM/pubchart?oid=1004413372&amp;format=interactive"></iframe>
                 </div>
                 <p>Welcome to "Life Palette by AG." Let's make every color count. 🎨✨</p>
-                <p>Let's start reviewing:</p>
+                <br>
+            <div class="review-main">
+                <h2>Let's review:</h2>
+                <br>
                 <nav>   
                     <ul>
-                        <li> <a href="#" class="button-link" @click="navigateTo('health', $event)">🌿 Health Hues</a></li>
-                        <li> <a href="#" class="button-link" @click="navigateTo('career', $event)"> 💼 Career Canvas </a></li>
-                        <li> <a href="#" class="button-link" @click="navigateTo('relationships', $event)"> ❤️ Relationship Shades </a></li>  
+                        <li> <a href="#" id="button-health" class="button-link" @click="navigateTo('health', $event)">🌿 Health Hues</a></li>
+                        <li> <a href="#" id="button-career" class="button-link" @click="navigateTo('career', $event)"> 💼 Career Canvas </a></li>
+                        <li> <a href="#" id="button-relationships" class="button-link" @click="navigateTo('relationships', $event)"> ❤️ Relationship Shades </a></li>  
                     </ul>
                 <nav>
+            </div>
             </section>
         
       
@@ -70,6 +80,7 @@
                 <p>I've taken some reasonable and achievable actions:</p>
                 <p>🏋️ Dedicating just 20 minutes a day to exercise </p>
                 <p>🙅‍♂️ Waving goodbye to takeout and fast food</p>
+                <p></p>
                 <br>
                 <p>My goals are:</p> 
                         <p>📉 Losing 5 kg</p> 
