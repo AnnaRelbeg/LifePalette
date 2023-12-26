@@ -206,6 +206,7 @@ footer {
 @media only screen and (max-width: 768px) {
     header {
         padding: 10px 0; /* Reduce padding */
+        margin-bottom: 80px;
     }
 }
 
