@@ -13,6 +13,12 @@
     <div id="app">  
         <header>
             <h1>Life Palette by AG</h1>
+            <div id="language-selector">
+                Select Language: 
+                <button onclick="changeLanguage('en')"> 🇵🇬🇧 English</button>
+                <button onclick="changeLanguage('pl')"> 🇵🇱 Polski</button>
+            </div>
+            
         </header>
 
         <main>
@@ -74,21 +80,29 @@
       
             <section id="health" v-if="currentView === 'health'">
                 <h2>Health Hues</h2>
+                <div class="iframe-container"> 
+                    <iframe width="600" height="300" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR_IbMfNmCLjGJhUU7vw0Gtc1CGNzF-SdZ6C_WiRMhDx6J-1Y73j_wjuxROEC6Qb5gGlhhP7tDRm0ZM/pubchart?oid=1643313093&amp;format=interactive"></iframe>
+                </div>
                 <p>Health has become my top priority, especially as I approach my 29th birthday in 2024. It's time to get serious about my well-being! I'll admit, I've fallen into some not-so-great habits—ordering takeout, not moving enough, and forgetting to stay hydrated.</p>
                 <br>
+                <h3>Body</h3>
                 <p>I've taken some reasonable actions. Here's my progress today & YTD:</p>
                 <div id="health-chart">
                     <iframe width="474" height="356" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR_IbMfNmCLjGJhUU7vw0Gtc1CGNzF-SdZ6C_WiRMhDx6J-1Y73j_wjuxROEC6Qb5gGlhhP7tDRm0ZM/pubchart?oid=1476258990&amp;format=interactive"></iframe>
                 </div>
                 <br>
+                <h3>Mind</h3>
+                <p>I think I keep my mind relatively healthy. Doing this is likely to help me get things more organised up there.</p>
+                <br>
+                <h3>Soul</h3>
+                <p>Church</p>
+                <br>
+                <h3>Review</h3>
                 <p>My goals are:</p> 
                         <p>📉 Losing 5 kg</p> 
                         <p>🤸‍♂️ Boosting flexibility</p>
                         <p>⚡ Supercharging my energy levels</p>
                 <br>
-                <div class="iframe-container"> 
-                    <iframe width="600" height="300" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR_IbMfNmCLjGJhUU7vw0Gtc1CGNzF-SdZ6C_WiRMhDx6J-1Y73j_wjuxROEC6Qb5gGlhhP7tDRm0ZM/pubchart?oid=1643313093&amp;format=interactive"></iframe>
-                </div>
                 <p>This is where you can find my super-quick recipes and exercise routines</p>
                     <article class="blog-post">
                         <h3>Healthy (ish) meals!</h3>
@@ -123,6 +137,23 @@
             <p>&copy; 2023 Life Palette by AG</p>
         </footer>
     </div>
+    <script>
+        function changeLanguage(language) {
+    var currentPage = window.location.pathname;
+    var page = currentPage.substring(currentPage.lastIndexOf('/') + 1);
+
+    if (language === 'pl') {
+        // Redirect to Polish version
+        var polishPage = page.replace('.html', '_pl.html');
+        window.location.href = polishPage;
+    } else {
+        // Redirect to English version
+        var englishPage = page.replace('_pl', '');
+        window.location.href = englishPage;
+    }
+}
+
+    </script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
         <script src="app.js"></script>
     </body>
