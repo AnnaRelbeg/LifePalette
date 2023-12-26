@@ -213,6 +213,7 @@ footer {
 @media only screen and (max-width: 768px) {
     main, section, .blog-post {
         padding: 12px; /* Less padding for smaller screens */
+        margin-top: 40px;
     }
 }
 
@@ -229,7 +230,7 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    body, p, nav a {
+    body, p, nav a, .button-link {
         font-size: 12px; /* Smaller font size for readability */
     }
 }
