@@ -13,12 +13,14 @@
     <div id="app">  
         <header>
             <h1>Life Palette by AG</h1>
-            <div id="language-selector">
-                Select Language: 
-                <button onclick="changeLanguage('en')">English</button>
-                <button onclick="changeLanguage('pl')">Polski</button>
-            </div>
-            
+            <nav>   
+                <ul>
+                    <li> <a href="#" id="button-about" class="button-link" @click="navigateTo('about',$event)"> Colour Me</a></li>
+                    <li> <a href="#" id="button-health" class="button-link" @click="navigateTo('health', $event)">🌿 Health Hues</a></li>
+                    <li> <a href="#" id="button-career" class="button-link" @click="navigateTo('career', $event)"> 💼 Career Canvas </a></li>
+                    <li> <a href="#" id="button-relationships" class="button-link" @click="navigateTo('relationships', $event)"> ❤️ Relationship Shades </a></li>  
+                </ul>
+            <nav>
         </header>
 
         <main>
@@ -26,7 +28,7 @@
                 <h2 id="welcome-message">{{ greetingMessage }}</h2>
             </section>
 
-            <section id="about">
+            <section id="about" v-if="currentView === 'about'">
                 <h2>Colour Me</h2>
                 <br>
                 <p>Isn't life just utterly overwhelming? It's like a vibrant and intricate painting, full of colors and details that sometimes blur into a mess. We're constantly juggling between our dreams, responsibilities, trying to find that elusive balance.</p>
