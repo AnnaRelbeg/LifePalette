@@ -17,6 +17,7 @@ body {
     background-size: cover; /* Cover the entire background */
     background-repeat: no-repeat; /* Prevent image repetition */
     background-attachment: fixed; /* Fixed background */
+    background-position: center center; /* Adjust as needed */
     transition: background-image 0.5s ease; /* Smooth transition for background change */
 
 }
