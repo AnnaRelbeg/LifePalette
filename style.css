@@ -232,7 +232,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
     body, p, nav a, .button-link {
-        font-size: 12px; /* Smaller font size for readability */
+        font-size: 10px; /* Smaller font size for readability */
     }
 }
 
@@ -245,17 +245,17 @@ footer {
 
 @media only screen and (max-width: 768px) {
     nav ul li a, button, .clickable-element {
-        padding: 12px; /* Smaller targets */
+        padding: 10px; /* Smaller targets */
     }
 }
 
 @media only screen and (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack items vertically on small screens */
+        flex-direction: row; /* Stack items vertically on small screens */
     }
 
     nav ul li {
-        margin: 5px 0; /* Adjust margins for vertical stacking */
+        margin: 1px 0; /* Adjust margins for vertical stacking */
     }
 }
 
