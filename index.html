@@ -144,11 +144,11 @@
 
     if (language === 'pl') {
         // Redirect to Polish version
-        var polishPage = page.replace('.html', '_pl.html');
+        var polishPage = page.replace('.html', 'pl.html');
         window.location.href = polishPage;
     } else {
         // Redirect to English version
-        var englishPage = page.replace('_pl', '');
+        var englishPage = page.replace('pl', '');
         window.location.href = englishPage;
     }
 }
