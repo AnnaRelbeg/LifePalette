@@ -271,3 +271,10 @@ table {
     justify-content: center; /* Center horizontally */
     align-items: center;  /* Center vertically */
 }
+
+#health-chart iframe {
+    width: 600px; /* Full width of the container */
+    height: 300px;
+    border: none; /* Optional: Removes the border */
+    max-width: 100%;
+}
