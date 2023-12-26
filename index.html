@@ -152,8 +152,23 @@
         window.location.href = englishPage;
     }
 }
-
     </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded and parsed");
+
+    var healthButton = document.getElementById('button-health');
+    console.log("Health button:", healthButton);
+
+    healthButton.addEventListener('click', function(event) {
+        console.log("Health button clicked");
+        document.body.style.backgroundImage = "url('assets/images/health.webp')";
+    });
+});
+</script>
+
         <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
         <script src="app.js"></script>
     </body>
