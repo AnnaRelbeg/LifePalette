@@ -272,6 +272,14 @@ footer {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .button-link {
+        padding: 8px 15px; /* Smaller padding */
+        font-size: 14px; /* Smaller font size */
+        margin: 3px; /* Smaller margin */
+    }
+}
+
 img {
 
     max-width: 100%; /* Ensure they don't overflow the screen width */
