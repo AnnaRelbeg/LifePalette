@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Paleta Życia przez AG | Odkrywanie Zdrowia, Kariery i Relacji</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png"  href="assets/images/logo.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    </head>
+
+    <body>
+    
+    <div id="app">  
+        <header>
+            <h1>Paleta Życia od AG</h1>
+            <div id="language-selector">
+                Wybierz język: 
+                <button onclick="changeLanguage('en')">Angielski</button>
+                <button onclick="changeLanguage('pl')">Polski</button>
+            </div>
+            
+        </header>
+
+        <main>
+            <section id="home">
+                <h2 id="welcome-message">{{ greetingMessage }}</h2>
+            </section>
+
+            <section id="about">
+                <h2>Koloruj mnie</h2>
+                <br>
+                <p>Czy życie nie jest po prostu przytłaczające? To jak żywy i skomplikowany obraz, pełen kolorów i szczegółów, które czasami stają się bałaganem. Ciągle balansujemy między naszymi marzeniami a obowiązkami, starając się znaleźć tę nieuchwytną równowagę.</p>
+                <br>
+                <p>Zdecydowałam się złożyć publiczne zobowiązanie wobec siebie, obietnicę pozostania odpowiedzialną i monitorowania mojej podróży przez ten labirynt. Mam tendencję do rozwijania laserowego skupienia na jednym aspekcie mojego życia, wlewając w to całą moją energię i pasję. Chociaż to poświęcenie przyniosło pewne osiągnięcia, często wiązało się to z kosztami.</p>
+                <br>
+                <p>Widziałam, jak moje intensywne dążenie do jednego celu mogą nieumyślnie zaniedbywać inne kluczowe obszary mojego życia. To jak huśtawka; gdy jedna strona wzlatuje, inne opadają, a ogólna równowaga zostaje zaburzona.</p>
+                <br>
+                <p>Więc wyruszyłam w podróż, aby odkryć zawiłe nitki łączące zdrowie, karierę i relacje. Jestem tutaj, aby podzielić się moimi spostrzeżeniami, wyzwaniami i triumfami.</p>
+                <br>
+                <p>W moim dążeniu do równowagi i rozwoju ustaliłam trzy kluczowe wskaźniki: <b>Zdrowie, Kariera i Relacje</b>, każdy z trzema krytycznymi podkategoriami. Regularne ocenianie w skali od 1 do 10.</p>
+                <br>
+                <table>
+                    <th>Zdrowie 🌿</th>
+                    <th>Kariera 💼</th>
+                    <th>Relacje 🤝</th>
+                    <tr>
+                        <td>Ciało 💪</td>
+                        <td>Misja 🚀</td>
+                        <td>Mentorzy 💼</td>
+                    </tr>
+                    <tr>
+                        <td>Umysł 🧠</td>
+                        <td>Pieniądze 💰</td>
+                        <td>Rodzina 👨‍👩‍👧</td>
+                    </tr>
+                    <tr>
+                        <td>Dusza ✨</td>
+                        <td>Rozwój 🌱</td>
+                        <td>Przyjaciele 🙌</td>
+                    </tr>
+                </table>
+                <br>
+                <div class="iframe-container">
+                    <iframe width=600 height=300 seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR_IbMfNmCLjGJhUU7vw0Gtc1CGNzF-SdZ6C_WiRMhDx6J-1Y73j_wjuxROEC6Qb5gGlhhP7tDRm0ZM/pubchart?oid=1004413372&amp;format=interactive"></iframe>
+                </div>
+                <p>Witamy w \"Paletcie Życia przez AG.\" Sprawmy, by każdy kolor się liczył. 🎨✨</p>
+                <br>
+            <div class="review-main">
+                <h2>Przeanalizujmy:</h2>
+                <br>
+                <nav>   
+                    <ul>
+                        <li> <a href="#" id="button-health" class="button-link" @click="navigateTo('health', $event)">🌿 Odcienie Zdrowia</a></li>
+                        <li> <a href="#" id="button-career" class="button-link" @click="navigateTo('career', $event)"> 💼 Płótno Kariery </a></li>
+                        <li> <a href="#" id="button-relationships" class="button-link" @click="navigateTo('relationships', $event)"> ❤️ Odcienie Relacji </a></li>  
+                    </ul>
+                <nav>
+            </div>
+            </section>
+
+            <section id="health" v-if="currentView === 'health'">
+                <h2>Odcienie Zdrowia</h2>
+                <div class="iframe-container"> 
+                    <iframe width="600" height="300" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR_IbMfNmCLjGJhUU7vw0Gtc1CGNzF-SdZ6C_WiRMhDx6J-1Y73j_wjuxROEC6Qb5gGlhhP7tDRm0ZM/pubchart?oid=1643313093&amp;format=interactive"></iframe>
+                </div>
+                <p>Zdrowie stało się moim najważniejszym priorytetem, szczególnie gdy zbliżam się do moich 29tych urodzin w 2024 roku. Czas zacząć poważnie dbać o moje samopoczucie! Przyznam, że wpadłam w kilka niezbyt dobrych nawyków - zamawianie jedzenia na wynos, brak ruchu i zapominanie o nawadnianiu.</p>
+                <br>
+                <h3>Ciało</h3>
+                <p>Podjęłam kilka rozsądnych działań. Oto mój postęp dzisiaj i w skali roku:</p>
+                <div id="health-chart">
+                    <iframe width="474" height="356" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR_IbMfNmCLjGJhUU7vw0Gtc1CGNzF-SdZ6C_WiRMhDx6J-1Y73j_wjuxROEC6Qb5gGlhhP7tDRm0ZM/pubchart?oid=1476258990&amp;format=interactive"></iframe>
+                </div>
+                <br>
+                <h3>Umysł</h3>
+                <p>Myślę, że trzymam mój umysł w stosunkowo dobrym zdrowiu. Robienie tego prawdopodobnie pomoże mi lepiej zorganizować się w głowie.</p>
+                <br>
+                <h3>Dusza</h3>
+                <p>Kościół</p>
+                <br>
+                <h3>Przegląd</h3>
+                <p>Moje cele to:</p> 
+                    <p>📉 Schudnięcie 5 kg</p> 
+                    <p>🤸‍♂️ Poprawa elastyczności</p>
+                    <p>⚡ Zwiększenie poziomu energii</p>
+                <br>
+                <p>Tutaj znajdziesz moje super-szybkie przepisy i rutyny ćwiczeń</p>
+                    <article class="blog-post">
+                        <h3>Zdrowe (mniej więcej) posiłki!</h3>
+                        <p> DO DODANIA</p>
+                    </article>
+            </section>
+            
+            <section id="career" v-if="currentView === 'career'">
+                <h2>Platno Kariery</h2>
+                <p>Szczerze mówiąc, to może być mój ulubiony dział!</p>
+            </section>
+            
+            <section id="relationships" v-if="currentView === 'relationships'">
+                <h2>Odcienie Relacji</h2>
+                <p>To jest moja najmniej ulubiona rzecz do dyskusji lub myślenia. Często to bagatelizuję lub unikam za wszelką cenę.</p>
+            </section>
+            
+            <section class="blog-posts" v-if="currentView === 'blog-posts'">
+                <article class="blog-post">
+                    <h2>Cele na 2024</h2>
+                </article>
+            </section>
+            </main>
+            
+            <footer>
+                <p>&copy; 2023 Paleta Życia od AG</p>
+            </footer>
+            
