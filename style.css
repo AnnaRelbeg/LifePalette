@@ -74,6 +74,12 @@ nav a {
     text-align: center;
 }
 
+#button-calendar {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
 #button-health {
     background-color: #4caf50; /* Green color for Health */
     color: white;

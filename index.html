@@ -16,6 +16,7 @@
             <nav>   
                 <ul>
                     <li> <a href="#" id="button-about" class="button-link" @click="navigateTo('about',$event)"> Colour Me</a></li>
+                    <li> <a href="#" id="button-calendar" class="button-link" @click="navigateTo('calendar',$event)">📅 Calendar</a></li>
                     <li> <a href="#" id="button-health" class="button-link" @click="navigateTo('health', $event)">🌿 Health Hues</a></li>
                     <li> <a href="#" id="button-career" class="button-link" @click="navigateTo('career', $event)"> 💼 Career Canvas </a></li>
                     <li> <a href="#" id="button-relationships" class="button-link" @click="navigateTo('relationships', $event)"> ❤️ Relationship Shades </a></li>  
@@ -79,7 +80,23 @@
                 <nav>
             </div>
             </section>
-      
+            
+            <section id="calendar" v-if="currentView ==='calendar'">
+                <h2 class ="animated-highlight">28th Calendar Review</h2>
+                <h3 class = "animated-highlight">January 2024</h3>
+                <p>The real hallmark of a person of value isn't found in pursuing those who are oblivious to her worth, but rather in being a resilient pillar of support for those who acknowledge and depend on her. The cessation of chasing unattainable ideals and embracing the role of being a reliable figure for others signifies a true measure of maturity and strength. </p>
+                <h3>December 2023</h3>
+                <p>Happiness is a product of hardcore self-discipline. In a world full of excuses and emotional noise, true respect and achievement are earned through relentless dedication. Slacking off betrays not just you, but those who believe in you. You owe it to yourself and people who depend on you to be the hardest worker in the room. Ruthless discipline, crushing goals, and a legacy of resolve and achievement.</p>
+                <h3>November 2023</h3>
+                <p>You can’t conquer a mountain you haven’t identified. Too many drift through life, day to day, without a clear target. They’re like blind archers, arrows flying aimlessly. No wonder they end up with a life they didn’t sign up for, settling for mediocrity.
+                    Define what ‘more’ means to you. Map it out. This isn’t daydreaming; it’s strategy.
+                    The moment you pinpoint your goals, your brain shifts gears. You’re no longer a leaf in the wind on; you’re a hunter on the prowl.
+                    </p>
+                <h3>October 2023</h3>
+                <p>The world doesn’t care about your daydreams. It respects those who think strategically and act decisively. The difference between a dreamer and a doer? A structured, logical mind. 
+                    A strategic mind doesn’t just wish; it plans. It doesn’t hope; it executes. Having a logical mind means you’re not swayed by emotions or illusions. You see the world as it is, not as you wish it to be. You calculate risks, weigh options, and make moves based on facts, not fantasies.
+                    </p>
+            </section>
             <section id="health" v-if="currentView === 'health'">
                 <h2 class="animated-highlight">Health Hues</h2>
                 <div class="iframe-container"> 
